@@ -1,6 +1,8 @@
 package model;
 
-public class JugadorHockey extends Persona implements DesplazarseEnPistaConPalo {
+import javafx.geometry.Pos;
+
+public class JugadorHockey extends Persona implements IDesplazarseEnPistaConPalo, IPasarElDisco {
     protected String nombre;
     protected int numero;
     protected Posicion posicion;
@@ -25,5 +27,9 @@ public class JugadorHockey extends Persona implements DesplazarseEnPistaConPalo 
         } else {
             return nombre + " es el portero y no se desplaza más allá de media pista.";
         }
+    }
+
+    public String pasarElDisco() {
+        return getNombre() + " le pasa el disco a ";
     }
 }

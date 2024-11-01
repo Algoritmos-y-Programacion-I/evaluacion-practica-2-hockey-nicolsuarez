@@ -47,13 +47,13 @@ public class Executable {
 
 			switch (option) {
 					case 1:
-
+                        System.out.println(controladora.fixture());
 						break;
 					case 2:
-
+                        crearObjetosDePrueba();
 						break;
 					case 3:
-
+                        simularPartido();
 						break;
 					case 4:
 						flag = true;
@@ -83,4 +83,15 @@ public class Executable {
 
     }
 
+    public void crearObjetosDePrueba() {
+        controladora.crearEquiposDePrueba();
+        controladora.crearArbitrosDePrueba();
+        controladora.crearJugadoresDePrueba();
+
+        System.out.println("Creados con exito");
+    }
+
+    public void simularPartido() {
+        controladora.simulacionJugadaGol();
+    }
 }
